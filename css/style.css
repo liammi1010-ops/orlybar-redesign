@@ -942,7 +942,8 @@ a:hover .roll > span, button:hover .roll > span, a:focus-visible .roll > span { 
 }
 @media (max-width: 767px) {
   .deck { height: 340vh; }
-  .deck__stack { --dh: min(38svh, 50vw); --dw: calc(var(--dh) * .8); }
+  .deck__stack { --dh: min(36svh, 70vw); --dw: calc(var(--dh) * .8); top: 52%; }
+  .deck__pin { padding-block: 4.4rem 1.6rem; }
   .dcard { padding: 5px 5px 30px; }
   .dcard__cap { bottom: 7px; right: 8px; left: 8px; font-size: .78rem; }
   .br-mobile { display: inline; }

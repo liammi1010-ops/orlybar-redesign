@@ -742,25 +742,29 @@
     let lastP = 0;
     const layout = (p) => {
       lastP = p;
-      const s = p * N; // how many pairs have been thrown
+      const LAG = .3; // the second card of a pair leaves a moment after the first
+      const s = p * (N + LAG); // how many pairs have been thrown
       const W = window.innerWidth, H = window.innerHeight;
-      const cw = cards[0].offsetWidth;
-      const half = cw / 2 + Math.max(10, cw * .05); // each card sits half a card plus a gap from the centre
+      const cw = cards[0].offsetWidth, ch = cards[0].offsetHeight;
+      const mob = isMobile();
+      // wide screens: side by side; phones: on a diagonal, one higher and one lower
+      const half = mob ? cw * .3 : cw / 2 + Math.max(10, cw * .05);
+      const lift = mob ? ch * .26 : 0;
       cards.forEach((c, j) => {
         const i = Math.floor(j / 2), side = j % 2 ? -1 : 1; // RTL: first of the pair on the right
-        const d = i - s, base = ROT[j % ROT.length], dir = i % 2 ? 1 : -1;
-        let x = side * half, y = 0, r = base, sc = 1, o = 1;
+        const d = i - s + (side < 0 ? LAG : 0), base = ROT[j % ROT.length], dir = i % 2 ? 1 : -1;
+        let x = side * half, y = -side * lift, r = base, sc = 1, o = 1;
         if (d < 0) {
           const l = Math.min(1, -d);
           x = side * half - l * W * (side > 0 ? 1.05 : .95);
-          y = dir * Math.sin(l * Math.PI / 2) * H * .16 + side * l * H * .03;
+          y = -side * lift + dir * Math.sin(l * Math.PI / 2) * H * .16 + side * l * H * .03;
           r = base - l * (24 + (j % 3) * 8);
           o = 1 - Math.max(0, l - .72) / .28;
         } else {
           const depth = Math.min(d, 4);
           sc = 1 - depth * .045;
           x = side * half * sc;
-          y = depth * 15;
+          y = -side * lift * sc + depth * 15;
           o = d > 4.5 ? 0 : 1;
         }
         c.style.transform = `translate3d(${x.toFixed(1)}px,${y.toFixed(1)}px,0) rotate(${r.toFixed(2)}deg) scale(${sc.toFixed(4)})`;
