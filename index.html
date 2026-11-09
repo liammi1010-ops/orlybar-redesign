@@ -1,0 +1,410 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>אורלי בר · עיצוב ואדריכלות פנים</title>
+  <meta name="description" content="אורלי בר - עיצוב ואדריכלות פנים. כל חדר מקבל סיפור, כל מעבר שומר זיכרון.">
+  <meta name="theme-color" content="#FFFFFF">
+  <link rel="icon" href="img/logo.png">
+  <link rel="preload" href="fonts/TalentFS-VF.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" as="image" href="https://orlybar.co.il/wp-content/uploads/2025/05/modern-hom1e-12decoration-e1748516799522.webp">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip" href="#services">דלג לתוכן</a>
+
+  <!-- texture + progress -->
+  <div class="grain" aria-hidden="true"></div>
+  <div class="progress" aria-hidden="true"><span></span></div>
+
+  <!-- custom cursor -->
+  <div class="cursor" aria-hidden="true">
+    <div class="cursor__ring"><span class="cursor__label"></span></div>
+    <div class="cursor__dot"></div>
+  </div>
+
+  <!-- loader -->
+  <div class="loader" aria-hidden="true">
+    <div class="loader__inner">
+      <img class="loader__mark" src="https://orlybar.co.il/wp-content/uploads/2025/05/LOGO-2048x465.png" alt="">
+      <p class="loader__name">עיצוב ואדריכלות פנים</p>
+    </div>
+    <div class="loader__count"><span class="loader__num">0</span></div>
+    <div class="loader__bar"><span></span></div>
+  </div>
+
+  <!-- header -->
+  <header class="nav" id="nav">
+    <a href="#top" class="nav__logo" aria-label="אורלי בר, לראש העמוד">
+      <img src="https://orlybar.co.il/wp-content/uploads/2025/05/LOGO-2048x465.png" alt="אורלי בר" width="2048" height="465">
+    </a>
+    <nav class="nav__links" aria-label="ניווט ראשי">
+      <a href="#top" class="roll-me">ראשי</a>
+      <a href="#services" class="roll-me">חבילות שירותים</a>
+      <a href="#gallery" class="roll-me" data-open-gallery>גלריית פרויקטים</a>
+      <a href="#about" class="roll-me">אודות</a>
+      <a href="#articles" class="roll-me">כדאי לקרוא</a>
+    </nav>
+    <div class="nav__actions">
+      <a class="nav__social" href="https://www.facebook.com/profile.php?id=61572033945675" target="_blank" rel="noopener" aria-label="פייסבוק">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 8.5V6.8c0-.8.2-1.3 1.4-1.3H17V2.6c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.4-4 4.1v1.9H8v3.2h2.6V21H14v-9.3h2.6l.4-3.2H14z"/></svg>
+      </a>
+      <a class="nav__social" href="https://wa.me/972508438330" target="_blank" rel="noopener" aria-label="וואטסאפ">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2A9.7 9.7 0 0 0 3.6 16.9L2.3 21.7l4.9-1.3A9.7 9.7 0 1 0 12 2.2zm0 17.7c-1.5 0-2.9-.4-4.1-1.1l-.3-.2-2.9.8.8-2.8-.2-.3A8 8 0 1 1 12 19.9zm4.4-6c-.2-.1-1.4-.7-1.7-.8-.2-.1-.4-.1-.5.1l-.8.9c-.1.2-.3.2-.5.1a6.6 6.6 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.5-.4h-.5a.9.9 0 0 0-.7.3 2.8 2.8 0 0 0-.9 2.1c0 1.2.9 2.4 1 2.6.1.2 1.8 2.7 4.3 3.8 1.6.7 2.2.7 3 .6.5-.1 1.4-.6 1.6-1.1.2-.6.2-1 .1-1.1l-.5-.2z"/></svg>
+      </a>
+      <a class="btn btn--sm btn--ghost magnetic" href="tel:0527701182">
+        <svg class="btn__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>
+        <span class="btn__label">התקשרו עכשיו</span>
+      </a>
+      <button class="nav__burger" type="button" aria-label="פתיחת תפריט" aria-expanded="false" aria-controls="menu">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- mobile menu -->
+  <div class="menu" id="menu" aria-hidden="true">
+    <nav class="menu__links" aria-label="תפריט נייד">
+      <a href="#top">ראשי</a>
+      <a href="#services">חבילות שירותים</a>
+      <a href="#gallery" data-open-gallery>גלריית פרויקטים</a>
+      <a href="#about">אודות</a>
+      <a href="#articles">כדאי לקרוא</a>
+    </nav>
+    <a class="menu__phone" href="tel:0527701182" dir="ltr">052-770-1182</a>
+  </div>
+
+  <main>
+    <!-- ============ HERO: a swatch fan that opens, then one swatch becomes the room ============ -->
+    <section class="hero" id="top" aria-label="פתיח">
+      <div class="hero__pin">
+        <div class="hero__top">
+          <p class="hero__eyebrow">אורלי בר - עיצוב ואדריכלות פנים</p>
+          <h1 class="hero__title">
+            <span class="hero__w hero__w--light" data-split="chars">הבית הוא</span>
+            <span class="hero__w hero__w--bold"><span data-split="chars">ה-</span><span class="heart" role="img" aria-label="לב"><svg class="heart__svg" viewBox="2.33 3.13 19.34 17.94" aria-hidden="true"><defs><linearGradient id="heartGold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#EBD3A4"/><stop offset=".5" stop-color="#CAA168"/><stop offset="1" stop-color="#8E6C3D"/></linearGradient></defs><path class="heart__line" d="M12 20.6l-1.2-1.1C6 15.2 2.8 12.3 2.8 8.7 2.8 5.8 5.1 3.6 7.9 3.6c1.6 0 3.1.7 4.1 1.9 1-1.2 2.5-1.9 4.1-1.9 2.8 0 5.1 2.2 5.1 5.1 0 3.6-3.2 6.5-8 10.8L12 20.6z"/><path class="heart__glint" d="M12 20.6l-1.2-1.1C6 15.2 2.8 12.3 2.8 8.7 2.8 5.8 5.1 3.6 7.9 3.6c1.6 0 3.1.7 4.1 1.9 1-1.2 2.5-1.9 4.1-1.9 2.8 0 5.1 2.2 5.1 5.1 0 3.6-3.2 6.5-8 10.8L12 20.6z"/></svg></span></span>
+          </h1>
+        </div>
+
+        <div class="fan" role="list" aria-label="דוגמאות מהפרויקטים">
+          <!-- swatches are rendered from main.js (FAN) -->
+        </div>
+
+        <a href="#gallery" class="link-line hero__cta hero__cta--r" data-open-gallery><span class="roll-me">לגלריית פרויקטים</span><svg viewBox="0 0 40 12" aria-hidden="true"><path d="M40 6H2m0 0 5-5M2 6l5 5" fill="none" stroke="currentColor" stroke-width="1.2"/></svg></a>
+        <a href="#contact" class="link-line hero__cta hero__cta--l"><span class="roll-me">ליצירת קשר</span><svg viewBox="0 0 40 12" aria-hidden="true"><path d="M40 6H2m0 0 5-5M2 6l5 5" fill="none" stroke="currentColor" stroke-width="1.2"/></svg></a>
+
+        <div class="hero__media" aria-hidden="true">
+          <img class="hero__img" src="https://orlybar.co.il/wp-content/uploads/2025/05/modern-hom1e-12decoration-e1748516799522.webp" alt="">
+        </div>
+        <div class="hero__shade"></div>
+
+        <div class="hero__statement">
+          <p class="statement">
+            <span class="line" data-split="chars">כל חדר מקבל סיפור,</span>
+            <span class="line" data-split="chars">כל מעבר שומר זיכרון-</span>
+            <span class="statement__small" data-split="words">ונשמה אחת גדולה דואגת שהפעימה הזו תתקיים, תמיד, באהבה.</span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SERVICES ============ -->
+    <section class="services" id="services">
+      <div class="container services__head">
+        <div class="eyebrow" data-fade><span class="eyebrow__num">01</span><span class="eyebrow__line"></span><span>חבילות שירותים</span></div>
+        <div class="services__headline">
+          <h2 class="display services__title">
+            <span class="line" data-split="chars">עיצוב מדויק</span>
+            <span class="line line--b" data-split="chars">מתחיל בהקשבה-</span>
+          </h2>
+          <p class="services__sub" data-fade>לרצונות, לחלומות <span class="br">וללב של כל בני הבית</span></p>
+        </div>
+      </div>
+
+      <div class="container wave-wrap" data-fade>
+        <canvas class="wave" aria-hidden="true"></canvas>
+      </div>
+
+      <div class="container">
+        <div class="panels">
+          <!-- rendered from main.js (SERVICES) -->
+        </div>
+      </div>
+
+      <div class="container services__end">
+        <p class="big-statement" data-scrub>העיצוב מתחיל בכם, יחד ניצור חלל שמשקף בדיוק את מי שאתם</p>
+        <div data-fade>
+          <a href="#contact" class="btn btn--lg magnetic"><span class="btn__label">ליצירת קשר</span><span class="btn__arrow" aria-hidden="true">←</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ VALUES: pinned cinematic stage ============ -->
+    <section class="values" id="values" data-nav="dark">
+      <div class="values__pin">
+        <div class="values__bgword" aria-hidden="true"></div>
+        <div class="container values__stage">
+          <div class="values__text">
+            <div class="values__head">
+              <div class="eyebrow eyebrow--light"><span class="eyebrow__num">02</span><span class="eyebrow__line"></span><span>ערכים</span></div>
+              <h2 class="values__title">ערכי הליבה שלי</h2>
+            </div>
+            <div class="values__count" aria-hidden="true"><span class="values__cur">01</span><span class="values__sep"></span><span class="values__total">04</span></div>
+            <div class="values__words"></div>
+            <div class="values__paras"></div>
+            <div class="values__nav" aria-label="ערכי הליבה"></div>
+          </div>
+          <div class="values__media">
+            <div class="values__frame"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ WORK ============ -->
+    <section class="work" id="work">
+      <div class="container work__head">
+        <div class="eyebrow" data-fade><span class="eyebrow__num">03</span><span class="eyebrow__line"></span><span>פרויקטים</span></div>
+        <h2 class="display work__title" data-split="chars">פרויקטים אחרונים</h2>
+      </div>
+
+      <!-- grid that zooms into one project -->
+      <div class="zoom">
+        <div class="zoom__pin">
+          <div class="zoom__grid">
+            <!-- cells are rendered from main.js (ZOOM) -->
+          </div>
+          <div class="zoom__shade"></div>
+          <p class="zoom__text">
+            <span class="line" data-split="chars">כשעיצוב פוגש תשוקה,</span>
+            <span class="line" data-split="chars">התוצאה מדברת בעד עצמה.</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="gal" aria-label="פרויקטים נבחרים">
+        <!-- the deck of project photos is rendered from main.js (REEL) -->
+      </div>
+    </section>
+
+    <!-- ============ ABOUT (same order as the original site) ============ -->
+    <section class="love" id="about" data-nav="dark">
+      <div class="love__bg"><img src="https://orlybar.co.il/wp-content/uploads/2025/06/DSC071581-1-1.webp" alt="אורלי בר מחזיקה מניפת דוגמאות צבע" loading="lazy"></div>
+      <div class="love__shade"></div>
+      <div class="container love__inner">
+        <h2 class="display love__title" data-split="chars">אני מאוהבת במקצוע שלי</h2>
+        <div class="love__body" data-scrub>
+          <p>אני חיה דיזיין, נושמת קירות וגוונים, רואה את העולם נקי ויפה, מתאהבת בחללים, מלטפת טקסטורות, מאוהבת בעבודה שלי ובוחרת את הלקוחות שלי כמו מניפה שדוגמת צבעים.</p>
+        </div>
+        <div data-fade>
+          <a href="#contact" class="link-line link-line--light"><span class="roll-me">ליצירת קשר</span><svg viewBox="0 0 40 12" aria-hidden="true"><path d="M40 6H2m0 0 5-5M2 6l5 5" fill="none" stroke="currentColor" stroke-width="1.2"/></svg></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="bio" aria-label="אורלי בר">
+      <div class="container bio__grid">
+        <div class="bio__visual">
+          <div class="bio__frame"><img class="bio__img" src="https://orlybar.co.il/wp-content/uploads/2025/06/DSC07504-Edit-e1749045137221.webp" alt="אורלי בר יושבת ליד שולחן העבודה" loading="lazy"></div>
+          <span class="bio__line" aria-hidden="true"></span>
+        </div>
+        <div class="bio__text">
+          <h2 class="bio__name" data-split="chars">אורלי בר</h2>
+          <p class="bio__role" data-fade>מעצבת ואדריכלית פנים</p>
+          <div class="bio__body">
+            <p data-fade>אני מאמינה שכל לקוח שמגיע אליי מדויק לי, ובזכות כל אחד אני הופכת להיות טובה יותר במקצוע.</p>
+            <p data-fade>אני אוהבת לשלב את הצבע הלבן- החגיגי והצח, כזה שנותן תחושה של ניקיון ומרחב וכן זהו צבע מיוחד במראה יוקרתי על כל גווניו המשולבים יחדיו.</p>
+            <p data-fade>אני יודעת שאני נותנת הרבה ערך מוסף מעבר לעיצוב ולומדת באופן תמידי את החדשנות הקיימת על מנת להנגיש עבורכם את הטוב ביותר.</p>
+            <p data-fade>איתי, אתם מקבלים לא רק עיצוב - אלא חוויה לאורך כל התהליך, אני קשובה אליכם, מדייקת את הרצונות שלכם ומייצרת עבורכם מרחב שמשקף את האישיות שלכם בצורה הטובה ביותר.</p>
+          </div>
+          <p class="bio__sign" data-split="words">הבית שלכם. החלום שלכם. התשוקה שלי.</p>
+          <div data-fade>
+            <button class="link-line" type="button" data-open-drawer="drawer"><span class="roll-me">להמשך קריאה</span><svg viewBox="0 0 40 12" aria-hidden="true"><path d="M40 6H2m0 0 5-5M2 6l5 5" fill="none" stroke="currentColor" stroke-width="1.2"/></svg></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ARTICLES: a mood board ============ -->
+    <section class="articles" id="articles">
+      <div class="container articles__head">
+        <div>
+          <div class="eyebrow" data-fade><span class="eyebrow__num">04</span><span class="eyebrow__line"></span><span>מאמרים</span></div>
+          <h2 class="display" data-split="chars">כדאי לקרוא</h2>
+        </div>
+        <p class="articles__hint" data-fade>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 11V5.5a1.5 1.5 0 0 1 3 0V11m0-1.5a1.5 1.5 0 0 1 3 0V11m0-.5a1.5 1.5 0 0 1 3 0v4.5a6 6 0 0 1-6 6h-.6a6 6 0 0 1-4.6-2.2L4.6 15a1.5 1.5 0 0 1 2.3-1.9L9 15.5" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span class="hint-mouse">אפשר לגרור את הכרטיסים על הלוח</span><span class="hint-touch">החליקו לצדדים לעוד מאמרים</span>
+        </p>
+      </div>
+      <div class="container">
+        <div class="board">
+          <span class="chip-swatch chip-swatch--1" aria-hidden="true"></span>
+          <span class="chip-swatch chip-swatch--2" aria-hidden="true"></span>
+          <span class="chip-swatch chip-swatch--3" aria-hidden="true"></span>
+          <span class="board__strip" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+          <!-- notes are rendered from main.js (ARTICLES) -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT (the original footer form, with a lamp that turns on) ============ -->
+    <section class="contact" id="contact">
+      <div class="container contact__grid">
+        <div class="contact__panel">
+          <!-- as on the original site: the heading sits blurred in the back, the invitation is written over it -->
+          <div class="contact__head">
+            <h2 class="contact__ghost">הבית הוא הלב</h2>
+            <p class="contact__title">
+              <span class="line" data-split="words">בואו נהפוך את הבית שלכם</span>
+              <span class="line" data-split="words">למקום שתמיד חלמתם עליו</span>
+            </p>
+          </div>
+
+          <form class="form" novalidate data-fade>
+            <div class="form__grid">
+              <label class="field"><input type="text" name="name" autocomplete="name" required placeholder=" "><span>שם מלא</span></label>
+              <label class="field"><input type="email" name="email" autocomplete="email" placeholder=" "><span>אימייל</span></label>
+              <label class="field"><input type="tel" name="phone" autocomplete="tel" required placeholder=" " dir="rtl"><span>טלפון</span></label>
+            </div>
+            <fieldset class="opts">
+              <legend>איזה שירות מעניין אותך?</legend>
+              <label class="opt"><input type="checkbox" name="service" value="עיצוב ותכנון פנים"><span>עיצוב ותכנון פנים</span></label>
+              <label class="opt"><input type="checkbox" name="service" value="הום סטיילינג"><span>הום סטיילינג</span></label>
+              <label class="opt"><input type="checkbox" name="service" value="פגישת ייעוץ פוקוס"><span>פגישת ייעוץ פוקוס</span></label>
+              <label class="opt"><input type="checkbox" name="service" value="הכל"><span>הכל</span></label>
+              <label class="opt"><input type="checkbox" name="service" value="אחר"><span>אחר</span></label>
+            </fieldset>
+            <button class="btn magnetic" type="submit"><span class="btn__label">שליחה</span><span class="btn__arrow" aria-hidden="true">←</span></button>
+            <p class="form__status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+
+        <div class="contact__visual" aria-hidden="true">
+          <div class="room">
+            <img class="room__img" src="https://orlybar.co.il/wp-content/uploads/2025/06/white-fabric-armchair-white-background-3d-rendering-image-there-are-clipping-path-armchair-lamp.jpg" alt="" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER (original layout, with a lamp light that follows the cursor) ============ -->
+  <div class="footer-wrap" data-nav="dark">
+    <footer class="footer">
+      <div class="footer__bg"><img src="https://orlybar.co.il/wp-content/uploads/2025/06/IMG_2334-Edit-Edit.webp" alt="" loading="lazy"></div>
+      <div class="footer__dim"></div>
+      <div class="footer__glow"></div>
+
+      <div class="container footer__cols">
+        <nav class="footer__col footer__col--nav" aria-label="תפריט ניווט">
+          <h3 class="footer__h">תפריט ניווט</h3>
+          <a href="#top" class="roll-me">ראשי</a>
+          <a href="#services" class="roll-me">חבילות שירותים</a>
+          <a href="#gallery" class="roll-me" data-open-gallery>גלריית פרויקטים</a>
+          <a href="#about" class="roll-me">אודות</a>
+          <a href="#articles" class="roll-me">כדאי לקרוא</a>
+        </nav>
+        <div class="footer__col footer__col--arts">
+          <h3 class="footer__h">מאמרים אחרונים</h3>
+          <div class="footer__arts"><!-- rendered from main.js (ARTICLES) --></div>
+        </div>
+        <div class="footer__col footer__col--svc">
+          <h3 class="footer__h">חבילות שירותים</h3>
+          <a href="#services" class="roll-me">תכנון ועיצוב פנים</a>
+          <a href="#services" class="roll-me">הום סטיילינג</a>
+          <a href="#services" class="roll-me">ייעוץ פוקוס</a>
+        </div>
+        <div class="footer__col footer__col--contact">
+          <h3 class="footer__h">יצירת קשר</h3>
+          <a href="tel:0527701182" class="footer__contact"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg><span dir="ltr">052-770-1182</span></a>
+          <a href="mailto:contact@orlybar.co.il" class="footer__contact"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18v14H3V5zm1.5 1.5v.4l7.5 5.6 7.5-5.6v-.4h-15zm15 2.3-7.5 5.6-7.5-5.6v8.7h15V8.8z"/></svg><span dir="ltr">contact@orlybar.co.il</span></a>
+        </div>
+        <div class="footer__col footer__col--social">
+          <h3 class="footer__h">רשתות חברתיות</h3>
+          <div class="footer__social">
+            <a href="https://www.facebook.com/profile.php?id=61572033945675" target="_blank" rel="noopener" aria-label="פייסבוק"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 8.5V6.8c0-.8.2-1.3 1.4-1.3H17V2.6c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.4-4 4.1v1.9H8v3.2h2.6V21H14v-9.3h2.6l.4-3.2H14z"/></svg></a>
+            <a href="https://wa.me/972508438330" target="_blank" rel="noopener" aria-label="וואטסאפ"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2A9.7 9.7 0 0 0 3.6 16.9L2.3 21.7l4.9-1.3A9.7 9.7 0 1 0 12 2.2zm0 17.7c-1.5 0-2.9-.4-4.1-1.1l-.3-.2-2.9.8.8-2.8-.2-.3A8 8 0 1 1 12 19.9zm4.4-6c-.2-.1-1.4-.7-1.7-.8-.2-.1-.4-.1-.5.1l-.8.9c-.1.2-.3.2-.5.1a6.6 6.6 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.5-.4h-.5a.9.9 0 0 0-.7.3 2.8 2.8 0 0 0-.9 2.1c0 1.2.9 2.4 1 2.6.1.2 1.8 2.7 4.3 3.8 1.6.7 2.2.7 3 .6.5-.1 1.4-.6 1.6-1.1.2-.6.2-1 .1-1.1l-.5-.2z"/></svg></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="container footer__bottom">
+        <div class="footer__legal">
+          <span>© כל הזכויות שמורות לאורלי בר</span>
+          <span>עיצוב ופיתוח האתר: <br class="br-mobile"><a href="https://indianastudio.co.il/" target="_blank" rel="noopener"><b>INDIANA</b> | אינדיאנה - פיתוח אתרים ומערכות</a></span>
+        </div>
+        <a href="#top" class="footer__logo" aria-label="אורלי בר, לראש העמוד"><img src="https://orlybar.co.il/wp-content/uploads/2025/05/LOGO-2048x465.png" alt="אורלי בר" width="2048" height="465"></a>
+      </div>
+    </footer>
+  </div>
+
+  <!-- floating call (mobile) -->
+  <a class="fab" href="tel:0527701182" aria-label="התקשרו עכשיו">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>
+  </a>
+
+  <!-- about drawer -->
+  <div class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="אודות אורלי בר" aria-hidden="true">
+    <div class="drawer__scrim" data-close-drawer></div>
+    <div class="drawer__panel" data-lenis-prevent>
+      <button class="drawer__close" type="button" aria-label="סגירה" data-close-drawer><span></span><span></span></button>
+      <div class="drawer__media"><img src="https://orlybar.co.il/wp-content/uploads/2025/06/DSC07538-Edit.webp" alt="אורלי בר" loading="lazy"></div>
+      <div class="drawer__body">
+        <p class="drawer__quote">"יוקרה ואלגנטיות פוגשות <b>נוחות ופונקציונליות"</b></p>
+        <p class="drawer__hi">נעים להכיר!</p>
+        <p class="drawer__lead">אני אורלי בר, מעצבת ומתכננת פנים, ואשמח לקחת אתכם למסע היצירתי שלי.</p>
+        <p>עוד בילדותי, אני זוכרת את עצמי מעצבת ומסדרת חללים. כשהתשוקה שלי לעיצוב מתעוררת בכל פעם שאני נכנסת לחלל חדש. אני חשה כמיהה בלתי נגמרת לעצב ולראות את החזון שלי מתממש, ולתת לכל מקום את האופי הייחודי שלו.</p>
+        <p>כמעצבת פנים, אני מאמינה שכל חלל הוא סיפור, וכל לקוח הוא חלק מהסיפור הזה. אני מתמקדת בהבנת הצרכים והחלומות של הלקוחות שלי, כדי ליצור עיצובים מותאמים אישית שמחברים בין הפונקציונליות לאסתטיקה, לניקיון וליוקרה.</p>
+        <p>כפי שהגשמתי את חלומי להיות המעצבת פנים שעליה תמיד חלמתי ולראותה באופן המדויק ולא ליד, כך העיצוב שלי בביתכם ייבחר בקפידה רבה כאילו הבית הוא שלי באופן אישי.</p>
+        <p>החזון שלי הוא להפוך כל חלל ליצירת אמנות חיה. אני משתמשת בחומרים הטובים ביותר, טכנולוגיות מתקדמות ותשומת לב בלתי מתפשרת לכל פרט, כדי ליצור עבורכם בית שלא רק נראה טוב, אלא גם משדר תחושת יוקרה ורוגע.</p>
+        <p>הפילוסופיה שלי מתבססת על הבנה מעמיקה של צרכי לקוחותיי, אני מאמינה שעיצוב פנים הוא לא רק עיצוב חלל, אלא חוויית חיים שלמה. כל פריט נבחר בקפידה, וכל צבע משקף את האישיות ואת אורח החיים.</p>
+        <p>אני כאן כדי לעזור לכם להפוך את ביתכם לחלל שבו תרגישו בבית, מקום שבו כל פרט מתוכנן בקפידה ומוקדש לכם באהבה.</p>
+        <p class="drawer__end">בואו נצא יחד למסע עיצוב מרגש ♥</p>
+        <a href="#contact" class="btn magnetic" data-close-drawer><span class="btn__label">ליצירת קשר</span><span class="btn__arrow" aria-hidden="true">←</span></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- service drawer (filled from main.js) -->
+  <div class="drawer" id="svc-drawer" role="dialog" aria-modal="true" aria-label="פרטי השירות" aria-hidden="true">
+    <div class="drawer__scrim" data-close-drawer></div>
+    <div class="drawer__panel" data-lenis-prevent>
+      <button class="drawer__close" type="button" aria-label="סגירה" data-close-drawer><span></span><span></span></button>
+      <div class="drawer__media"><img src="" alt="" loading="lazy"></div>
+      <div class="drawer__body"></div>
+    </div>
+  </div>
+
+  <!-- gallery overlay -->
+  <div class="gallery" id="gallery" role="dialog" aria-modal="true" aria-label="גלריית פרויקטים" aria-hidden="true" data-lenis-prevent>
+    <div class="gallery__head">
+      <h2 class="gallery__title">גלריית פרויקטים</h2>
+      <div class="chips" role="group" aria-label="סינון לפי חלל"></div>
+      <button class="gallery__close" type="button" aria-label="סגירת הגלריה"><span></span><span></span></button>
+    </div>
+    <div class="gallery__grid"></div>
+  </div>
+
+  <!-- lightbox -->
+  <div class="lightbox" role="dialog" aria-modal="true" aria-label="תצוגת תמונה" aria-hidden="true">
+    <button class="lightbox__close" type="button" aria-label="סגירה"><span></span><span></span></button>
+    <button class="lightbox__nav lightbox__prev" type="button" aria-label="התמונה הקודמת">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+    </button>
+    <figure class="lightbox__fig">
+      <img class="lightbox__img" src="" alt="">
+      <figcaption class="lightbox__cap"><span class="lightbox__city"></span><span class="lightbox__idx"></span></figcaption>
+    </figure>
+    <button class="lightbox__nav lightbox__next" type="button" aria-label="התמונה הבאה">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+    </button>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
